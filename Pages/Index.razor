@@ -1,0 +1,38 @@
+﻿
+@page "/"
+<h1>Documento</h1>
+<button class="btn btn-primary" @onclick="IncrementList">Agregar componente</button>
+@* <Counter IncrementoCantidad="1" />
+<Counter IncrementoCantidad="2" />  *@
+
+@foreach (var elemento in _components)
+{
+    <Counter/>;
+}
+
+@*<Grid Items="customers" class="table table-bordered" RowClass='(row, index) => row.OrdersCount > 5 ? "table-success" : ""'>
+    <GridColumn TRowData="Customer" Expression="c => c.Id" />
+    <GridColumn TRowData="Customer" Expression="c => c.Name" />
+    <GridColumn TRowData="Customer" Expression="c => c.DateOfBirth" Format="d" />
+    
+</Grid>*@
+
+@code{
+@* private List<counter> _ComponentList = new(); *@
+
+private void IncrementList()
+    {
+        _components.Add(new Counter{IncrementoCantidad=2}); 
+    }
+
+
+readonly List<IComponent> _components = new List<IComponent>
+    {
+        new Counter()
+    };
+
+
+
+
+}
+
