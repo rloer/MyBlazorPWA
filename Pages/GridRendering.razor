@@ -41,7 +41,7 @@ else if (SelectedRenderMode == RenderMode.FastGrid)
 
 
 <Grid Items="forecasts" Data="@forecasts">
-    <GridColumn TRowData="WeatherForecast" Title="Date">@context.Date.ToShortDateString()</GridColumn>
+    <GridColumn TRowData="WeatherForecast" Title="Fecha">@context.Date.ToShortDateString()</GridColumn>
     <GridColumn TRowData="WeatherForecast" Title="TemperatureC">@context.TemperatureC</GridColumn>
     <GridColumn TRowData="WeatherForecast" Title="TemperatureF">@context.TemperatureF</GridColumn>
     <GridColumn TRowData="WeatherForecast" Title="Summary">@context.Summary</GridColumn>
